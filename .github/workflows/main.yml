@@ -12,12 +12,16 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: actions/checkout@v3
+      - name: Clone 
+        uses: actions/checkout@v3
       
       - name: Set up go      
         uses: actions/setup-go@v3
         with:
           go-version: ${{inputs.version}}
         
-      - run: go run hello.go
-      - run: go run main_test.go
+      - name: Run Hello world
+        run: go run hello.go
+      
+      - name: Run test file
+        run: go run main_test.go
