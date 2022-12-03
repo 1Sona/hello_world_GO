@@ -20,3 +20,4 @@ jobs:
           go-version: ${{inputs.version}}
         
       - run: go run hello.go
+      - run: go run main_test.go
