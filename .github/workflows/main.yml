@@ -8,6 +8,7 @@ on:
         default: 1.19.1
 
 jobs:
+
   build:
     runs-on: ubuntu-latest
     
@@ -20,8 +21,10 @@ jobs:
         with:
           go-version: ${{inputs.version}}
         
+      - name: Run test file
+        run: go test
+        
       - name: Run Hello world
         run: go run hello.go
       
-      - name: Run test file
-        run: go run main_test.go
+     
