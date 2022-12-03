@@ -21,16 +21,18 @@ jobs:
         uses: actions/setup-go@v3
         with:
           go-version: ${{inputs.version}}
+   
         
-      - name: init git module
-        run: go mod init
-        
-      - name: Run Hello world
+      - name: Run 
         run: go run hello.go
       
-      - name: Run test file
+      - name: test
         run: go test
-        
-  
+
+      - name: build
+        run: go build
+
+      - name: install
+        run: go install
       
      
