@@ -23,7 +23,7 @@ jobs:
           go-version: ${{inputs.version}}
       
       - name: module
-        run: go mod init
+        run: go mod init babken
 
       - name: Run 
         run: go run hello.go
