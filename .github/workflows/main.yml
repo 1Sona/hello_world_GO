@@ -21,6 +21,9 @@ jobs:
         with:
           go-version: ${{inputs.version}}
         
+      - name: init git module
+        run: go mode init
+        
       - name: Run test file
         run: go test
         
