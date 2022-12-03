@@ -19,4 +19,4 @@ jobs:
         with:
           go-version: ${{inputs.version}}
         
-      - run: go run main.go
+      - run: go run hello.go
