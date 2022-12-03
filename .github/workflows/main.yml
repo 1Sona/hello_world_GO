@@ -1,6 +1,7 @@
 name: go version
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       version:
@@ -24,10 +25,12 @@ jobs:
       - name: init git module
         run: go mod init
         
+      - name: Run Hello world
+        run: go run hello.go
+      
       - name: Run test file
         run: go test
         
-      - name: Run Hello world
-        run: go run hello.go
+  
       
      
