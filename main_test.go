@@ -7,3 +7,4 @@ func TestHelloWorld(t *testing.T) {
 		t.Fatal("Test fail")
 	}
 }
+
