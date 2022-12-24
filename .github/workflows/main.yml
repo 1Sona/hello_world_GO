@@ -38,3 +38,64 @@ jobs:
         run: go install
       
      
+1.19.1
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Clone 
+        uses: actions/checkout@v3
+      
+      - name: Set up go      
+        uses: actions/setup-go@v3
+        with:
+          go-version: ${{inputs.version}}
+      
+      - name: module
+        run: go mod init babken
+
+      - name: Run 
+        run: go run hello.go
+      
+      - name: test
+        run: go test
+
+      - name: build
+        run: go build1.19.1
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Clone 
+        uses: actions/checkout@v3
+      
+      - name: Set up go      
+        uses: actions/setup-go@v3
+        with:
+          go-version: ${{inputs.version}}
+      
+      - name: module
+        run: go mod init babken
+
+      - name: Run 
+        run: go run hello.go
+      
+      - name: test
+        run: go test
+
+      - name: build
+        run: go build
+
+      - name: install
+        run: go install
+
+      - name: install
+        run: go install
+      
+     
